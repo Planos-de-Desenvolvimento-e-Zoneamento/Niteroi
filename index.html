@@ -69,23 +69,27 @@
         <script src="data/reasAfetassOperaesPorturiasDisponveisparaArrendamentoMdioPrazo_28.js"></script>
         <script src="data/reasAfetassOperaesPorturiasDisponveisparaArrendamentoCurtoPrazo_29.js"></script>
         <script src="data/reasAfetassOperaesPorturiasArrendadas_30.js"></script>
-        <script src="data/CargaGeralOffshore_31.js"></script>
-        <script src="data/GranisSlidosCargaGeral_32.js"></script>
-        <script src="data/CargaOffshoreReparoNaval_33.js"></script>
-        <script src="data/CargaGeralOffshore_34.js"></script>
-        <script src="data/GranisSlidosCargaGeral_35.js"></script>
-        <script src="data/CargaOffshoreReparoNaval_36.js"></script>
-        <script src="data/CargaGeralOffshore_37.js"></script>
-        <script src="data/GranisSlidosCargaGeral_38.js"></script>
-        <script src="data/CargaOffshoreReparoNaval_39.js"></script>
-        <script src="data/CargaGeralOffshore_40.js"></script>
-        <script src="data/GranisSlidosCargaGeral_41.js"></script>
-        <script src="data/CargaOffshoreReparoNaval_42.js"></script>
-        <script src="data/reasAfetassOperaesPorturiasLongoPrazo_43.js"></script>
-        <script src="data/reasAfetassOperaesPorturiasMdioPrazo_44.js"></script>
-        <script src="data/reasAfetassOperaesPorturiasCurtoPrazo_45.js"></script>
-        <script src="data/reasAfetassOperaesPorturiasSituaoAtual_46.js"></script>
-        <script src="data/PoligonaldareadoPortoOrganizadodeNiteri_47.js"></script>
+        <script src="data/FluidosdePerfurao_31.js"></script>
+        <script src="data/CargaGeraleOffshore_32.js"></script>
+        <script src="data/GranisSlidoseCargaGeral_33.js"></script>
+        <script src="data/CargaOffshoreeReparoNaval_34.js"></script>
+        <script src="data/FluidosdePerfurao_35.js"></script>
+        <script src="data/CargaGeraleOffshore_36.js"></script>
+        <script src="data/GranisSlidoseCargaGeral_37.js"></script>
+        <script src="data/CargaOffshoreeReparoNaval_38.js"></script>
+        <script src="data/FluidosdePerfurao_39.js"></script>
+        <script src="data/CargaGeraleOffshore_40.js"></script>
+        <script src="data/GranisSlidoseCargaGeral_41.js"></script>
+        <script src="data/CargaOffshoreeReparoNaval_42.js"></script>
+        <script src="data/FluidosdePerfurao_43.js"></script>
+        <script src="data/CargaGeraleOffshore_44.js"></script>
+        <script src="data/GranisSlidoseCargaGeral_45.js"></script>
+        <script src="data/CargaOffshoreeReparoNaval_46.js"></script>
+        <script src="data/reasAfetassOperaesPorturiasLongoPrazo_47.js"></script>
+        <script src="data/reasAfetassOperaesPorturiasMdioPrazo_48.js"></script>
+        <script src="data/reasAfetassOperaesPorturiasCurtoPrazo_49.js"></script>
+        <script src="data/reasAfetassOperaesPorturiasSituaoAtual_50.js"></script>
+        <script src="data/PoligonaldareadoPortoOrganizadodeNiteri_51.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -94,7 +98,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-22.883927121071277,-43.12165462912494],[-22.87889900874956,-43.11359644911531]]);
+        }).fitBounds([[-22.88377362224209,-43.12042882572246],[-22.88015203937053,-43.113799341086455]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -194,16 +198,16 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Número de Identificação </th>\
-                        <td class="visible-with-data" id="N. Ident.">' + (feature.properties['N. Ident.'] !== null ? autolinker.link(feature.properties['N. Ident.'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Função</th>\
+                        <td class="visible-with-data" id="Funcao">' + (feature.properties['Funcao'] !== null ? autolinker.link(feature.properties['Funcao'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Calado (m) </th>\
                         <td class="visible-with-data" id="Calado">' + (feature.properties['Calado'] !== null ? autolinker.link(feature.properties['Calado'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Função </th>\
-                        <td class="visible-with-data" id="Fun��o">' + (feature.properties['Fun��o'] !== null ? autolinker.link(feature.properties['Fun��o'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Número de Identificação </th>\
+                        <td class="visible-with-data" id="N. Ident.">' + (feature.properties['N. Ident.'] !== null ? autolinker.link(feature.properties['N. Ident.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -256,16 +260,16 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Número de Identificação </th>\
-                        <td class="visible-with-data" id="N. Ident.">' + (feature.properties['N. Ident.'] !== null ? autolinker.link(feature.properties['N. Ident.'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Função</th>\
+                        <td class="visible-with-data" id="Funcao">' + (feature.properties['Funcao'] !== null ? autolinker.link(feature.properties['Funcao'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Calado (m) </th>\
                         <td class="visible-with-data" id="Calado">' + (feature.properties['Calado'] !== null ? autolinker.link(feature.properties['Calado'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Função </th>\
-                        <td class="visible-with-data" id="Fun��o">' + (feature.properties['Fun��o'] !== null ? autolinker.link(feature.properties['Fun��o'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Número de Identificação </th>\
+                        <td class="visible-with-data" id="N. Ident.">' + (feature.properties['N. Ident.'] !== null ? autolinker.link(feature.properties['N. Ident.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -318,16 +322,16 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Número de Identificação </th>\
-                        <td class="visible-with-data" id="N. Ident.">' + (feature.properties['N. Ident.'] !== null ? autolinker.link(feature.properties['N. Ident.'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Função</th>\
+                        <td class="visible-with-data" id="Funcao">' + (feature.properties['Funcao'] !== null ? autolinker.link(feature.properties['Funcao'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Calado (m) </th>\
                         <td class="visible-with-data" id="Calado">' + (feature.properties['Calado'] !== null ? autolinker.link(feature.properties['Calado'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Função </th>\
-                        <td class="visible-with-data" id="Fun��o">' + (feature.properties['Fun��o'] !== null ? autolinker.link(feature.properties['Fun��o'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Número de Identificação </th>\
+                        <td class="visible-with-data" id="N. Ident.">' + (feature.properties['N. Ident.'] !== null ? autolinker.link(feature.properties['N. Ident.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -380,16 +384,16 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Número de Identificação </th>\
-                        <td class="visible-with-data" id="N. Ident.">' + (feature.properties['N. Ident.'] !== null ? autolinker.link(feature.properties['N. Ident.'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Função</th>\
+                        <td class="visible-with-data" id="Funcao">' + (feature.properties['Funcao'] !== null ? autolinker.link(feature.properties['Funcao'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Calado (m)</th>\
                         <td class="visible-with-data" id="Calado">' + (feature.properties['Calado'] !== null ? autolinker.link(feature.properties['Calado'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Função </th>\
-                        <td class="visible-with-data" id="Fun��o">' + (feature.properties['Fun��o'] !== null ? autolinker.link(feature.properties['Fun��o'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Número de Identificação </th>\
+                        <td class="visible-with-data" id="N. Ident.">' + (feature.properties['N. Ident.'] !== null ? autolinker.link(feature.properties['N. Ident.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -1548,20 +1552,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tipo da Instalação </th>\
+                        <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Capacidade</th>\
                         <td class="visible-with-data" id="Capacidade">' + (feature.properties['Capacidade'] !== null ? autolinker.link(feature.properties['Capacidade'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Volume (m³) </th>\
-                        <td class="visible-with-data" id="Volume">' + (feature.properties['Volume'] !== null ? autolinker.link(feature.properties['Volume'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Tipo da Instalação </th>\
-                        <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Volulme</th>\
+                        <td class="visible-with-data" id="Volulme">' + (feature.properties['Volulme'] !== null ? autolinker.link(feature.properties['Volulme'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -1614,20 +1618,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tipo da Instalação </th>\
+                        <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Capacidade</th>\
                         <td class="visible-with-data" id="Capacidade">' + (feature.properties['Capacidade'] !== null ? autolinker.link(feature.properties['Capacidade'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Volume (m³) </th>\
-                        <td class="visible-with-data" id="Volume">' + (feature.properties['Volume'] !== null ? autolinker.link(feature.properties['Volume'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Tipo da Instalação </th>\
-                        <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Volulme</th>\
+                        <td class="visible-with-data" id="Volulme">' + (feature.properties['Volulme'] !== null ? autolinker.link(feature.properties['Volulme'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -1680,20 +1684,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tipo da Instalação </th>\
+                        <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Capacidade</th>\
                         <td class="visible-with-data" id="Capacidade">' + (feature.properties['Capacidade'] !== null ? autolinker.link(feature.properties['Capacidade'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Volume (m³) </th>\
-                        <td class="visible-with-data" id="Volume">' + (feature.properties['Volume'] !== null ? autolinker.link(feature.properties['Volume'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Tipo da Instalação </th>\
-                        <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Volulme</th>\
+                        <td class="visible-with-data" id="Volulme">' + (feature.properties['Volulme'] !== null ? autolinker.link(feature.properties['Volulme'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -1746,20 +1750,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tipo da Instalação </th>\
+                        <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Capacidade</th>\
                         <td class="visible-with-data" id="Capacidade">' + (feature.properties['Capacidade'] !== null ? autolinker.link(feature.properties['Capacidade'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Volume (m³) </th>\
-                        <td class="visible-with-data" id="Volume">' + (feature.properties['Volume'] !== null ? autolinker.link(feature.properties['Volume'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Tipo da Instalação </th>\
-                        <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Volulme</th>\
+                        <td class="visible-with-data" id="Volulme">' + (feature.properties['Volulme'] !== null ? autolinker.link(feature.properties['Volulme'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -1812,16 +1816,16 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil">' + (feature.properties['Perfil'] !== null ? autolinker.link(feature.properties['Perfil'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Área (m²) </th>\
                         <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -1874,16 +1878,16 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil">' + (feature.properties['Perfil'] !== null ? autolinker.link(feature.properties['Perfil'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Área (m²) </th>\
                         <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -1897,14 +1901,14 @@
             return {
                 pane: 'pane_reasAfetassOperaesPorturiasDisponveisparaArrendamentoMdioPrazo_28',
                 opacity: 1,
-                color: 'rgba(255,85,73,1.0)',
+                color: 'rgba(255,113,83,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 2.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(255,85,73,0.25098039215686274)',
+                fillColor: 'rgba(255,113,83,0.25098039215686274)',
                 interactive: true,
             }
         }
@@ -1936,16 +1940,16 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil">' + (feature.properties['Perfil'] !== null ? autolinker.link(feature.properties['Perfil'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Área (m²) </th>\
                         <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2002,12 +2006,12 @@
                         <td class="visible-with-data" id="Arrend.">' + (feature.properties['Arrend.'] !== null ? autolinker.link(feature.properties['Arrend.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Número do Contrato </th>\
-                        <td class="visible-with-data" id="N� Cont.">' + (feature.properties['N� Cont.'] !== null ? autolinker.link(feature.properties['N� Cont.'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Número do Contrato</th>\
+                        <td class="visible-with-data" id="Nº Cont.">' + (feature.properties['Nº Cont.'] !== null ? autolinker.link(feature.properties['Nº Cont.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Data Início do Contrato </th>\
-                        <td class="visible-with-data" id="D. Inicio">' + (feature.properties['D. Inicio'] !== null ? autolinker.link(feature.properties['D. Inicio'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="D.Inicio">' + (feature.properties['D.Inicio'] !== null ? autolinker.link(feature.properties['D.Inicio'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Data do Término do Contrato </th>\
@@ -2061,7 +2065,7 @@
             style: style_reasAfetassOperaesPorturiasArrendadas_30_0,
         });
         bounds_group.addLayer(layer_reasAfetassOperaesPorturiasArrendadas_30);
-        function pop_CargaGeralOffshore_31(feature, layer) {
+        function pop_FluidosdePerfurao_31(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2076,20 +2080,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2099,9 +2103,75 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CargaGeralOffshore_31_0() {
+        function style_FluidosdePerfurao_31_0() {
             return {
-                pane: 'pane_CargaGeralOffshore_31',
+                pane: 'pane_FluidosdePerfurao_31',
+                opacity: 1,
+                color: 'rgba(232,245,100,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(232,245,100,0.25098039215686274)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_FluidosdePerfurao_31');
+        map.getPane('pane_FluidosdePerfurao_31').style.zIndex = 431;
+        map.getPane('pane_FluidosdePerfurao_31').style['mix-blend-mode'] = 'normal';
+        var layer_FluidosdePerfurao_31 = new L.geoJson(json_FluidosdePerfurao_31, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_FluidosdePerfurao_31',
+            layerName: 'layer_FluidosdePerfurao_31',
+            pane: 'pane_FluidosdePerfurao_31',
+            onEachFeature: pop_FluidosdePerfurao_31,
+            style: style_FluidosdePerfurao_31_0,
+        });
+        bounds_group.addLayer(layer_FluidosdePerfurao_31);
+        function pop_CargaGeraleOffshore_32(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Perfil de Carga </th>\
+                        <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Tipo de Instalação </th>\
+                        <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_CargaGeraleOffshore_32_0() {
+            return {
+                pane: 'pane_CargaGeraleOffshore_32',
                 opacity: 1,
                 color: 'rgba(140,0,23,1.0)',
                 dashArray: '',
@@ -2114,20 +2184,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CargaGeralOffshore_31');
-        map.getPane('pane_CargaGeralOffshore_31').style.zIndex = 431;
-        map.getPane('pane_CargaGeralOffshore_31').style['mix-blend-mode'] = 'normal';
-        var layer_CargaGeralOffshore_31 = new L.geoJson(json_CargaGeralOffshore_31, {
+        map.createPane('pane_CargaGeraleOffshore_32');
+        map.getPane('pane_CargaGeraleOffshore_32').style.zIndex = 432;
+        map.getPane('pane_CargaGeraleOffshore_32').style['mix-blend-mode'] = 'normal';
+        var layer_CargaGeraleOffshore_32 = new L.geoJson(json_CargaGeraleOffshore_32, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CargaGeralOffshore_31',
-            layerName: 'layer_CargaGeralOffshore_31',
-            pane: 'pane_CargaGeralOffshore_31',
-            onEachFeature: pop_CargaGeralOffshore_31,
-            style: style_CargaGeralOffshore_31_0,
+            dataVar: 'json_CargaGeraleOffshore_32',
+            layerName: 'layer_CargaGeraleOffshore_32',
+            pane: 'pane_CargaGeraleOffshore_32',
+            onEachFeature: pop_CargaGeraleOffshore_32,
+            style: style_CargaGeraleOffshore_32_0,
         });
-        bounds_group.addLayer(layer_CargaGeralOffshore_31);
-        function pop_GranisSlidosCargaGeral_32(feature, layer) {
+        bounds_group.addLayer(layer_CargaGeraleOffshore_32);
+        function pop_GranisSlidoseCargaGeral_33(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2142,20 +2212,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2165,9 +2235,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_GranisSlidosCargaGeral_32_0() {
+        function style_GranisSlidoseCargaGeral_33_0() {
             return {
-                pane: 'pane_GranisSlidosCargaGeral_32',
+                pane: 'pane_GranisSlidoseCargaGeral_33',
                 opacity: 1,
                 color: 'rgba(215,143,0,1.0)',
                 dashArray: '',
@@ -2180,20 +2250,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_GranisSlidosCargaGeral_32');
-        map.getPane('pane_GranisSlidosCargaGeral_32').style.zIndex = 432;
-        map.getPane('pane_GranisSlidosCargaGeral_32').style['mix-blend-mode'] = 'normal';
-        var layer_GranisSlidosCargaGeral_32 = new L.geoJson(json_GranisSlidosCargaGeral_32, {
+        map.createPane('pane_GranisSlidoseCargaGeral_33');
+        map.getPane('pane_GranisSlidoseCargaGeral_33').style.zIndex = 433;
+        map.getPane('pane_GranisSlidoseCargaGeral_33').style['mix-blend-mode'] = 'normal';
+        var layer_GranisSlidoseCargaGeral_33 = new L.geoJson(json_GranisSlidoseCargaGeral_33, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_GranisSlidosCargaGeral_32',
-            layerName: 'layer_GranisSlidosCargaGeral_32',
-            pane: 'pane_GranisSlidosCargaGeral_32',
-            onEachFeature: pop_GranisSlidosCargaGeral_32,
-            style: style_GranisSlidosCargaGeral_32_0,
+            dataVar: 'json_GranisSlidoseCargaGeral_33',
+            layerName: 'layer_GranisSlidoseCargaGeral_33',
+            pane: 'pane_GranisSlidoseCargaGeral_33',
+            onEachFeature: pop_GranisSlidoseCargaGeral_33,
+            style: style_GranisSlidoseCargaGeral_33_0,
         });
-        bounds_group.addLayer(layer_GranisSlidosCargaGeral_32);
-        function pop_CargaOffshoreReparoNaval_33(feature, layer) {
+        bounds_group.addLayer(layer_GranisSlidoseCargaGeral_33);
+        function pop_CargaOffshoreeReparoNaval_34(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2208,20 +2278,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2231,9 +2301,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CargaOffshoreReparoNaval_33_0() {
+        function style_CargaOffshoreeReparoNaval_34_0() {
             return {
-                pane: 'pane_CargaOffshoreReparoNaval_33',
+                pane: 'pane_CargaOffshoreeReparoNaval_34',
                 opacity: 1,
                 color: 'rgba(39,1,255,1.0)',
                 dashArray: '',
@@ -2246,20 +2316,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CargaOffshoreReparoNaval_33');
-        map.getPane('pane_CargaOffshoreReparoNaval_33').style.zIndex = 433;
-        map.getPane('pane_CargaOffshoreReparoNaval_33').style['mix-blend-mode'] = 'normal';
-        var layer_CargaOffshoreReparoNaval_33 = new L.geoJson(json_CargaOffshoreReparoNaval_33, {
+        map.createPane('pane_CargaOffshoreeReparoNaval_34');
+        map.getPane('pane_CargaOffshoreeReparoNaval_34').style.zIndex = 434;
+        map.getPane('pane_CargaOffshoreeReparoNaval_34').style['mix-blend-mode'] = 'normal';
+        var layer_CargaOffshoreeReparoNaval_34 = new L.geoJson(json_CargaOffshoreeReparoNaval_34, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CargaOffshoreReparoNaval_33',
-            layerName: 'layer_CargaOffshoreReparoNaval_33',
-            pane: 'pane_CargaOffshoreReparoNaval_33',
-            onEachFeature: pop_CargaOffshoreReparoNaval_33,
-            style: style_CargaOffshoreReparoNaval_33_0,
+            dataVar: 'json_CargaOffshoreeReparoNaval_34',
+            layerName: 'layer_CargaOffshoreeReparoNaval_34',
+            pane: 'pane_CargaOffshoreeReparoNaval_34',
+            onEachFeature: pop_CargaOffshoreeReparoNaval_34,
+            style: style_CargaOffshoreeReparoNaval_34_0,
         });
-        bounds_group.addLayer(layer_CargaOffshoreReparoNaval_33);
-        function pop_CargaGeralOffshore_34(feature, layer) {
+        bounds_group.addLayer(layer_CargaOffshoreeReparoNaval_34);
+        function pop_FluidosdePerfurao_35(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2274,20 +2344,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2297,9 +2367,75 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CargaGeralOffshore_34_0() {
+        function style_FluidosdePerfurao_35_0() {
             return {
-                pane: 'pane_CargaGeralOffshore_34',
+                pane: 'pane_FluidosdePerfurao_35',
+                opacity: 1,
+                color: 'rgba(232,245,100,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(232,245,100,0.25098039215686274)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_FluidosdePerfurao_35');
+        map.getPane('pane_FluidosdePerfurao_35').style.zIndex = 435;
+        map.getPane('pane_FluidosdePerfurao_35').style['mix-blend-mode'] = 'normal';
+        var layer_FluidosdePerfurao_35 = new L.geoJson(json_FluidosdePerfurao_35, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_FluidosdePerfurao_35',
+            layerName: 'layer_FluidosdePerfurao_35',
+            pane: 'pane_FluidosdePerfurao_35',
+            onEachFeature: pop_FluidosdePerfurao_35,
+            style: style_FluidosdePerfurao_35_0,
+        });
+        bounds_group.addLayer(layer_FluidosdePerfurao_35);
+        function pop_CargaGeraleOffshore_36(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Perfil de Carga </th>\
+                        <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Tipo de Instalação </th>\
+                        <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_CargaGeraleOffshore_36_0() {
+            return {
+                pane: 'pane_CargaGeraleOffshore_36',
                 opacity: 1,
                 color: 'rgba(140,0,23,1.0)',
                 dashArray: '',
@@ -2312,20 +2448,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CargaGeralOffshore_34');
-        map.getPane('pane_CargaGeralOffshore_34').style.zIndex = 434;
-        map.getPane('pane_CargaGeralOffshore_34').style['mix-blend-mode'] = 'normal';
-        var layer_CargaGeralOffshore_34 = new L.geoJson(json_CargaGeralOffshore_34, {
+        map.createPane('pane_CargaGeraleOffshore_36');
+        map.getPane('pane_CargaGeraleOffshore_36').style.zIndex = 436;
+        map.getPane('pane_CargaGeraleOffshore_36').style['mix-blend-mode'] = 'normal';
+        var layer_CargaGeraleOffshore_36 = new L.geoJson(json_CargaGeraleOffshore_36, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CargaGeralOffshore_34',
-            layerName: 'layer_CargaGeralOffshore_34',
-            pane: 'pane_CargaGeralOffshore_34',
-            onEachFeature: pop_CargaGeralOffshore_34,
-            style: style_CargaGeralOffshore_34_0,
+            dataVar: 'json_CargaGeraleOffshore_36',
+            layerName: 'layer_CargaGeraleOffshore_36',
+            pane: 'pane_CargaGeraleOffshore_36',
+            onEachFeature: pop_CargaGeraleOffshore_36,
+            style: style_CargaGeraleOffshore_36_0,
         });
-        bounds_group.addLayer(layer_CargaGeralOffshore_34);
-        function pop_GranisSlidosCargaGeral_35(feature, layer) {
+        bounds_group.addLayer(layer_CargaGeraleOffshore_36);
+        function pop_GranisSlidoseCargaGeral_37(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2340,20 +2476,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2363,9 +2499,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_GranisSlidosCargaGeral_35_0() {
+        function style_GranisSlidoseCargaGeral_37_0() {
             return {
-                pane: 'pane_GranisSlidosCargaGeral_35',
+                pane: 'pane_GranisSlidoseCargaGeral_37',
                 opacity: 1,
                 color: 'rgba(215,143,0,1.0)',
                 dashArray: '',
@@ -2378,20 +2514,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_GranisSlidosCargaGeral_35');
-        map.getPane('pane_GranisSlidosCargaGeral_35').style.zIndex = 435;
-        map.getPane('pane_GranisSlidosCargaGeral_35').style['mix-blend-mode'] = 'normal';
-        var layer_GranisSlidosCargaGeral_35 = new L.geoJson(json_GranisSlidosCargaGeral_35, {
+        map.createPane('pane_GranisSlidoseCargaGeral_37');
+        map.getPane('pane_GranisSlidoseCargaGeral_37').style.zIndex = 437;
+        map.getPane('pane_GranisSlidoseCargaGeral_37').style['mix-blend-mode'] = 'normal';
+        var layer_GranisSlidoseCargaGeral_37 = new L.geoJson(json_GranisSlidoseCargaGeral_37, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_GranisSlidosCargaGeral_35',
-            layerName: 'layer_GranisSlidosCargaGeral_35',
-            pane: 'pane_GranisSlidosCargaGeral_35',
-            onEachFeature: pop_GranisSlidosCargaGeral_35,
-            style: style_GranisSlidosCargaGeral_35_0,
+            dataVar: 'json_GranisSlidoseCargaGeral_37',
+            layerName: 'layer_GranisSlidoseCargaGeral_37',
+            pane: 'pane_GranisSlidoseCargaGeral_37',
+            onEachFeature: pop_GranisSlidoseCargaGeral_37,
+            style: style_GranisSlidoseCargaGeral_37_0,
         });
-        bounds_group.addLayer(layer_GranisSlidosCargaGeral_35);
-        function pop_CargaOffshoreReparoNaval_36(feature, layer) {
+        bounds_group.addLayer(layer_GranisSlidoseCargaGeral_37);
+        function pop_CargaOffshoreeReparoNaval_38(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2406,20 +2542,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2429,9 +2565,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CargaOffshoreReparoNaval_36_0() {
+        function style_CargaOffshoreeReparoNaval_38_0() {
             return {
-                pane: 'pane_CargaOffshoreReparoNaval_36',
+                pane: 'pane_CargaOffshoreeReparoNaval_38',
                 opacity: 1,
                 color: 'rgba(39,1,255,1.0)',
                 dashArray: '',
@@ -2444,20 +2580,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CargaOffshoreReparoNaval_36');
-        map.getPane('pane_CargaOffshoreReparoNaval_36').style.zIndex = 436;
-        map.getPane('pane_CargaOffshoreReparoNaval_36').style['mix-blend-mode'] = 'normal';
-        var layer_CargaOffshoreReparoNaval_36 = new L.geoJson(json_CargaOffshoreReparoNaval_36, {
+        map.createPane('pane_CargaOffshoreeReparoNaval_38');
+        map.getPane('pane_CargaOffshoreeReparoNaval_38').style.zIndex = 438;
+        map.getPane('pane_CargaOffshoreeReparoNaval_38').style['mix-blend-mode'] = 'normal';
+        var layer_CargaOffshoreeReparoNaval_38 = new L.geoJson(json_CargaOffshoreeReparoNaval_38, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CargaOffshoreReparoNaval_36',
-            layerName: 'layer_CargaOffshoreReparoNaval_36',
-            pane: 'pane_CargaOffshoreReparoNaval_36',
-            onEachFeature: pop_CargaOffshoreReparoNaval_36,
-            style: style_CargaOffshoreReparoNaval_36_0,
+            dataVar: 'json_CargaOffshoreeReparoNaval_38',
+            layerName: 'layer_CargaOffshoreeReparoNaval_38',
+            pane: 'pane_CargaOffshoreeReparoNaval_38',
+            onEachFeature: pop_CargaOffshoreeReparoNaval_38,
+            style: style_CargaOffshoreeReparoNaval_38_0,
         });
-        bounds_group.addLayer(layer_CargaOffshoreReparoNaval_36);
-        function pop_CargaGeralOffshore_37(feature, layer) {
+        bounds_group.addLayer(layer_CargaOffshoreeReparoNaval_38);
+        function pop_FluidosdePerfurao_39(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2472,20 +2608,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2495,9 +2631,75 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CargaGeralOffshore_37_0() {
+        function style_FluidosdePerfurao_39_0() {
             return {
-                pane: 'pane_CargaGeralOffshore_37',
+                pane: 'pane_FluidosdePerfurao_39',
+                opacity: 1,
+                color: 'rgba(232,245,100,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(232,245,100,0.25098039215686274)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_FluidosdePerfurao_39');
+        map.getPane('pane_FluidosdePerfurao_39').style.zIndex = 439;
+        map.getPane('pane_FluidosdePerfurao_39').style['mix-blend-mode'] = 'normal';
+        var layer_FluidosdePerfurao_39 = new L.geoJson(json_FluidosdePerfurao_39, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_FluidosdePerfurao_39',
+            layerName: 'layer_FluidosdePerfurao_39',
+            pane: 'pane_FluidosdePerfurao_39',
+            onEachFeature: pop_FluidosdePerfurao_39,
+            style: style_FluidosdePerfurao_39_0,
+        });
+        bounds_group.addLayer(layer_FluidosdePerfurao_39);
+        function pop_CargaGeraleOffshore_40(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Perfil de Carga </th>\
+                        <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Tipo de Instalação </th>\
+                        <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_CargaGeraleOffshore_40_0() {
+            return {
+                pane: 'pane_CargaGeraleOffshore_40',
                 opacity: 1,
                 color: 'rgba(140,0,23,1.0)',
                 dashArray: '',
@@ -2510,20 +2712,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CargaGeralOffshore_37');
-        map.getPane('pane_CargaGeralOffshore_37').style.zIndex = 437;
-        map.getPane('pane_CargaGeralOffshore_37').style['mix-blend-mode'] = 'normal';
-        var layer_CargaGeralOffshore_37 = new L.geoJson(json_CargaGeralOffshore_37, {
+        map.createPane('pane_CargaGeraleOffshore_40');
+        map.getPane('pane_CargaGeraleOffshore_40').style.zIndex = 440;
+        map.getPane('pane_CargaGeraleOffshore_40').style['mix-blend-mode'] = 'normal';
+        var layer_CargaGeraleOffshore_40 = new L.geoJson(json_CargaGeraleOffshore_40, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CargaGeralOffshore_37',
-            layerName: 'layer_CargaGeralOffshore_37',
-            pane: 'pane_CargaGeralOffshore_37',
-            onEachFeature: pop_CargaGeralOffshore_37,
-            style: style_CargaGeralOffshore_37_0,
+            dataVar: 'json_CargaGeraleOffshore_40',
+            layerName: 'layer_CargaGeraleOffshore_40',
+            pane: 'pane_CargaGeraleOffshore_40',
+            onEachFeature: pop_CargaGeraleOffshore_40,
+            style: style_CargaGeraleOffshore_40_0,
         });
-        bounds_group.addLayer(layer_CargaGeralOffshore_37);
-        function pop_GranisSlidosCargaGeral_38(feature, layer) {
+        bounds_group.addLayer(layer_CargaGeraleOffshore_40);
+        function pop_GranisSlidoseCargaGeral_41(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2538,20 +2740,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2561,9 +2763,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_GranisSlidosCargaGeral_38_0() {
+        function style_GranisSlidoseCargaGeral_41_0() {
             return {
-                pane: 'pane_GranisSlidosCargaGeral_38',
+                pane: 'pane_GranisSlidoseCargaGeral_41',
                 opacity: 1,
                 color: 'rgba(215,143,0,1.0)',
                 dashArray: '',
@@ -2576,20 +2778,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_GranisSlidosCargaGeral_38');
-        map.getPane('pane_GranisSlidosCargaGeral_38').style.zIndex = 438;
-        map.getPane('pane_GranisSlidosCargaGeral_38').style['mix-blend-mode'] = 'normal';
-        var layer_GranisSlidosCargaGeral_38 = new L.geoJson(json_GranisSlidosCargaGeral_38, {
+        map.createPane('pane_GranisSlidoseCargaGeral_41');
+        map.getPane('pane_GranisSlidoseCargaGeral_41').style.zIndex = 441;
+        map.getPane('pane_GranisSlidoseCargaGeral_41').style['mix-blend-mode'] = 'normal';
+        var layer_GranisSlidoseCargaGeral_41 = new L.geoJson(json_GranisSlidoseCargaGeral_41, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_GranisSlidosCargaGeral_38',
-            layerName: 'layer_GranisSlidosCargaGeral_38',
-            pane: 'pane_GranisSlidosCargaGeral_38',
-            onEachFeature: pop_GranisSlidosCargaGeral_38,
-            style: style_GranisSlidosCargaGeral_38_0,
+            dataVar: 'json_GranisSlidoseCargaGeral_41',
+            layerName: 'layer_GranisSlidoseCargaGeral_41',
+            pane: 'pane_GranisSlidoseCargaGeral_41',
+            onEachFeature: pop_GranisSlidoseCargaGeral_41,
+            style: style_GranisSlidoseCargaGeral_41_0,
         });
-        bounds_group.addLayer(layer_GranisSlidosCargaGeral_38);
-        function pop_CargaOffshoreReparoNaval_39(feature, layer) {
+        bounds_group.addLayer(layer_GranisSlidoseCargaGeral_41);
+        function pop_CargaOffshoreeReparoNaval_42(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2604,20 +2806,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2627,9 +2829,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CargaOffshoreReparoNaval_39_0() {
+        function style_CargaOffshoreeReparoNaval_42_0() {
             return {
-                pane: 'pane_CargaOffshoreReparoNaval_39',
+                pane: 'pane_CargaOffshoreeReparoNaval_42',
                 opacity: 1,
                 color: 'rgba(39,1,255,1.0)',
                 dashArray: '',
@@ -2642,20 +2844,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CargaOffshoreReparoNaval_39');
-        map.getPane('pane_CargaOffshoreReparoNaval_39').style.zIndex = 439;
-        map.getPane('pane_CargaOffshoreReparoNaval_39').style['mix-blend-mode'] = 'normal';
-        var layer_CargaOffshoreReparoNaval_39 = new L.geoJson(json_CargaOffshoreReparoNaval_39, {
+        map.createPane('pane_CargaOffshoreeReparoNaval_42');
+        map.getPane('pane_CargaOffshoreeReparoNaval_42').style.zIndex = 442;
+        map.getPane('pane_CargaOffshoreeReparoNaval_42').style['mix-blend-mode'] = 'normal';
+        var layer_CargaOffshoreeReparoNaval_42 = new L.geoJson(json_CargaOffshoreeReparoNaval_42, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CargaOffshoreReparoNaval_39',
-            layerName: 'layer_CargaOffshoreReparoNaval_39',
-            pane: 'pane_CargaOffshoreReparoNaval_39',
-            onEachFeature: pop_CargaOffshoreReparoNaval_39,
-            style: style_CargaOffshoreReparoNaval_39_0,
+            dataVar: 'json_CargaOffshoreeReparoNaval_42',
+            layerName: 'layer_CargaOffshoreeReparoNaval_42',
+            pane: 'pane_CargaOffshoreeReparoNaval_42',
+            onEachFeature: pop_CargaOffshoreeReparoNaval_42,
+            style: style_CargaOffshoreeReparoNaval_42_0,
         });
-        bounds_group.addLayer(layer_CargaOffshoreReparoNaval_39);
-        function pop_CargaGeralOffshore_40(feature, layer) {
+        bounds_group.addLayer(layer_CargaOffshoreeReparoNaval_42);
+        function pop_FluidosdePerfurao_43(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2670,20 +2872,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2693,9 +2895,75 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CargaGeralOffshore_40_0() {
+        function style_FluidosdePerfurao_43_0() {
             return {
-                pane: 'pane_CargaGeralOffshore_40',
+                pane: 'pane_FluidosdePerfurao_43',
+                opacity: 1,
+                color: 'rgba(232,245,100,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(232,245,100,0.25098039215686274)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_FluidosdePerfurao_43');
+        map.getPane('pane_FluidosdePerfurao_43').style.zIndex = 443;
+        map.getPane('pane_FluidosdePerfurao_43').style['mix-blend-mode'] = 'normal';
+        var layer_FluidosdePerfurao_43 = new L.geoJson(json_FluidosdePerfurao_43, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_FluidosdePerfurao_43',
+            layerName: 'layer_FluidosdePerfurao_43',
+            pane: 'pane_FluidosdePerfurao_43',
+            onEachFeature: pop_FluidosdePerfurao_43,
+            style: style_FluidosdePerfurao_43_0,
+        });
+        bounds_group.addLayer(layer_FluidosdePerfurao_43);
+        function pop_CargaGeraleOffshore_44(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Perfil de Carga </th>\
+                        <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Tipo de Instalação </th>\
+                        <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_CargaGeraleOffshore_44_0() {
+            return {
+                pane: 'pane_CargaGeraleOffshore_44',
                 opacity: 1,
                 color: 'rgba(140,0,23,1.0)',
                 dashArray: '',
@@ -2708,20 +2976,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CargaGeralOffshore_40');
-        map.getPane('pane_CargaGeralOffshore_40').style.zIndex = 440;
-        map.getPane('pane_CargaGeralOffshore_40').style['mix-blend-mode'] = 'normal';
-        var layer_CargaGeralOffshore_40 = new L.geoJson(json_CargaGeralOffshore_40, {
+        map.createPane('pane_CargaGeraleOffshore_44');
+        map.getPane('pane_CargaGeraleOffshore_44').style.zIndex = 444;
+        map.getPane('pane_CargaGeraleOffshore_44').style['mix-blend-mode'] = 'normal';
+        var layer_CargaGeraleOffshore_44 = new L.geoJson(json_CargaGeraleOffshore_44, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CargaGeralOffshore_40',
-            layerName: 'layer_CargaGeralOffshore_40',
-            pane: 'pane_CargaGeralOffshore_40',
-            onEachFeature: pop_CargaGeralOffshore_40,
-            style: style_CargaGeralOffshore_40_0,
+            dataVar: 'json_CargaGeraleOffshore_44',
+            layerName: 'layer_CargaGeraleOffshore_44',
+            pane: 'pane_CargaGeraleOffshore_44',
+            onEachFeature: pop_CargaGeraleOffshore_44,
+            style: style_CargaGeraleOffshore_44_0,
         });
-        bounds_group.addLayer(layer_CargaGeralOffshore_40);
-        function pop_GranisSlidosCargaGeral_41(feature, layer) {
+        bounds_group.addLayer(layer_CargaGeraleOffshore_44);
+        function pop_GranisSlidoseCargaGeral_45(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2736,20 +3004,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2759,9 +3027,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_GranisSlidosCargaGeral_41_0() {
+        function style_GranisSlidoseCargaGeral_45_0() {
             return {
-                pane: 'pane_GranisSlidosCargaGeral_41',
+                pane: 'pane_GranisSlidoseCargaGeral_45',
                 opacity: 1,
                 color: 'rgba(215,143,0,1.0)',
                 dashArray: '',
@@ -2774,20 +3042,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_GranisSlidosCargaGeral_41');
-        map.getPane('pane_GranisSlidosCargaGeral_41').style.zIndex = 441;
-        map.getPane('pane_GranisSlidosCargaGeral_41').style['mix-blend-mode'] = 'normal';
-        var layer_GranisSlidosCargaGeral_41 = new L.geoJson(json_GranisSlidosCargaGeral_41, {
+        map.createPane('pane_GranisSlidoseCargaGeral_45');
+        map.getPane('pane_GranisSlidoseCargaGeral_45').style.zIndex = 445;
+        map.getPane('pane_GranisSlidoseCargaGeral_45').style['mix-blend-mode'] = 'normal';
+        var layer_GranisSlidoseCargaGeral_45 = new L.geoJson(json_GranisSlidoseCargaGeral_45, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_GranisSlidosCargaGeral_41',
-            layerName: 'layer_GranisSlidosCargaGeral_41',
-            pane: 'pane_GranisSlidosCargaGeral_41',
-            onEachFeature: pop_GranisSlidosCargaGeral_41,
-            style: style_GranisSlidosCargaGeral_41_0,
+            dataVar: 'json_GranisSlidoseCargaGeral_45',
+            layerName: 'layer_GranisSlidoseCargaGeral_45',
+            pane: 'pane_GranisSlidoseCargaGeral_45',
+            onEachFeature: pop_GranisSlidoseCargaGeral_45,
+            style: style_GranisSlidoseCargaGeral_45_0,
         });
-        bounds_group.addLayer(layer_GranisSlidosCargaGeral_41);
-        function pop_CargaOffshoreReparoNaval_42(feature, layer) {
+        bounds_group.addLayer(layer_GranisSlidoseCargaGeral_45);
+        function pop_CargaOffshoreeReparoNaval_46(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2802,20 +3070,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil de">' + (feature.properties['Perfil de'] !== null ? autolinker.link(feature.properties['Perfil de'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="Tipo de In">' + (feature.properties['Tipo de In'] !== null ? autolinker.link(feature.properties['Tipo de In'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área (m²">' + (feature.properties['Área (m²'] !== null ? autolinker.link(feature.properties['Área (m²'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2825,9 +3093,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CargaOffshoreReparoNaval_42_0() {
+        function style_CargaOffshoreeReparoNaval_46_0() {
             return {
-                pane: 'pane_CargaOffshoreReparoNaval_42',
+                pane: 'pane_CargaOffshoreeReparoNaval_46',
                 opacity: 1,
                 color: 'rgba(39,1,255,1.0)',
                 dashArray: '',
@@ -2840,20 +3108,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CargaOffshoreReparoNaval_42');
-        map.getPane('pane_CargaOffshoreReparoNaval_42').style.zIndex = 442;
-        map.getPane('pane_CargaOffshoreReparoNaval_42').style['mix-blend-mode'] = 'normal';
-        var layer_CargaOffshoreReparoNaval_42 = new L.geoJson(json_CargaOffshoreReparoNaval_42, {
+        map.createPane('pane_CargaOffshoreeReparoNaval_46');
+        map.getPane('pane_CargaOffshoreeReparoNaval_46').style.zIndex = 446;
+        map.getPane('pane_CargaOffshoreeReparoNaval_46').style['mix-blend-mode'] = 'normal';
+        var layer_CargaOffshoreeReparoNaval_46 = new L.geoJson(json_CargaOffshoreeReparoNaval_46, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CargaOffshoreReparoNaval_42',
-            layerName: 'layer_CargaOffshoreReparoNaval_42',
-            pane: 'pane_CargaOffshoreReparoNaval_42',
-            onEachFeature: pop_CargaOffshoreReparoNaval_42,
-            style: style_CargaOffshoreReparoNaval_42_0,
+            dataVar: 'json_CargaOffshoreeReparoNaval_46',
+            layerName: 'layer_CargaOffshoreeReparoNaval_46',
+            pane: 'pane_CargaOffshoreeReparoNaval_46',
+            onEachFeature: pop_CargaOffshoreeReparoNaval_46,
+            style: style_CargaOffshoreeReparoNaval_46_0,
         });
-        bounds_group.addLayer(layer_CargaOffshoreReparoNaval_42);
-        function pop_reasAfetassOperaesPorturiasLongoPrazo_43(feature, layer) {
+        bounds_group.addLayer(layer_CargaOffshoreeReparoNaval_46);
+        function pop_reasAfetassOperaesPorturiasLongoPrazo_47(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2867,21 +3135,21 @@
                 mouseover: highlightFeature,
             });
             var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
                     <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil">' + (feature.properties['Perfil'] !== null ? autolinker.link(feature.properties['Perfil'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2891,9 +3159,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_reasAfetassOperaesPorturiasLongoPrazo_43_0() {
+        function style_reasAfetassOperaesPorturiasLongoPrazo_47_0() {
             return {
-                pane: 'pane_reasAfetassOperaesPorturiasLongoPrazo_43',
+                pane: 'pane_reasAfetassOperaesPorturiasLongoPrazo_47',
                 opacity: 1,
                 color: 'rgba(235,24,81,1.0)',
                 dashArray: '',
@@ -2906,20 +3174,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_reasAfetassOperaesPorturiasLongoPrazo_43');
-        map.getPane('pane_reasAfetassOperaesPorturiasLongoPrazo_43').style.zIndex = 443;
-        map.getPane('pane_reasAfetassOperaesPorturiasLongoPrazo_43').style['mix-blend-mode'] = 'normal';
-        var layer_reasAfetassOperaesPorturiasLongoPrazo_43 = new L.geoJson(json_reasAfetassOperaesPorturiasLongoPrazo_43, {
+        map.createPane('pane_reasAfetassOperaesPorturiasLongoPrazo_47');
+        map.getPane('pane_reasAfetassOperaesPorturiasLongoPrazo_47').style.zIndex = 447;
+        map.getPane('pane_reasAfetassOperaesPorturiasLongoPrazo_47').style['mix-blend-mode'] = 'normal';
+        var layer_reasAfetassOperaesPorturiasLongoPrazo_47 = new L.geoJson(json_reasAfetassOperaesPorturiasLongoPrazo_47, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_reasAfetassOperaesPorturiasLongoPrazo_43',
-            layerName: 'layer_reasAfetassOperaesPorturiasLongoPrazo_43',
-            pane: 'pane_reasAfetassOperaesPorturiasLongoPrazo_43',
-            onEachFeature: pop_reasAfetassOperaesPorturiasLongoPrazo_43,
-            style: style_reasAfetassOperaesPorturiasLongoPrazo_43_0,
+            dataVar: 'json_reasAfetassOperaesPorturiasLongoPrazo_47',
+            layerName: 'layer_reasAfetassOperaesPorturiasLongoPrazo_47',
+            pane: 'pane_reasAfetassOperaesPorturiasLongoPrazo_47',
+            onEachFeature: pop_reasAfetassOperaesPorturiasLongoPrazo_47,
+            style: style_reasAfetassOperaesPorturiasLongoPrazo_47_0,
         });
-        bounds_group.addLayer(layer_reasAfetassOperaesPorturiasLongoPrazo_43);
-        function pop_reasAfetassOperaesPorturiasMdioPrazo_44(feature, layer) {
+        bounds_group.addLayer(layer_reasAfetassOperaesPorturiasLongoPrazo_47);
+        function pop_reasAfetassOperaesPorturiasMdioPrazo_48(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -2934,20 +3202,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil">' + (feature.properties['Perfil'] !== null ? autolinker.link(feature.properties['Perfil'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -2957,9 +3225,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_reasAfetassOperaesPorturiasMdioPrazo_44_0() {
+        function style_reasAfetassOperaesPorturiasMdioPrazo_48_0() {
             return {
-                pane: 'pane_reasAfetassOperaesPorturiasMdioPrazo_44',
+                pane: 'pane_reasAfetassOperaesPorturiasMdioPrazo_48',
                 opacity: 1,
                 color: 'rgba(181,83,109,1.0)',
                 dashArray: '',
@@ -2972,20 +3240,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_reasAfetassOperaesPorturiasMdioPrazo_44');
-        map.getPane('pane_reasAfetassOperaesPorturiasMdioPrazo_44').style.zIndex = 444;
-        map.getPane('pane_reasAfetassOperaesPorturiasMdioPrazo_44').style['mix-blend-mode'] = 'normal';
-        var layer_reasAfetassOperaesPorturiasMdioPrazo_44 = new L.geoJson(json_reasAfetassOperaesPorturiasMdioPrazo_44, {
+        map.createPane('pane_reasAfetassOperaesPorturiasMdioPrazo_48');
+        map.getPane('pane_reasAfetassOperaesPorturiasMdioPrazo_48').style.zIndex = 448;
+        map.getPane('pane_reasAfetassOperaesPorturiasMdioPrazo_48').style['mix-blend-mode'] = 'normal';
+        var layer_reasAfetassOperaesPorturiasMdioPrazo_48 = new L.geoJson(json_reasAfetassOperaesPorturiasMdioPrazo_48, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_reasAfetassOperaesPorturiasMdioPrazo_44',
-            layerName: 'layer_reasAfetassOperaesPorturiasMdioPrazo_44',
-            pane: 'pane_reasAfetassOperaesPorturiasMdioPrazo_44',
-            onEachFeature: pop_reasAfetassOperaesPorturiasMdioPrazo_44,
-            style: style_reasAfetassOperaesPorturiasMdioPrazo_44_0,
+            dataVar: 'json_reasAfetassOperaesPorturiasMdioPrazo_48',
+            layerName: 'layer_reasAfetassOperaesPorturiasMdioPrazo_48',
+            pane: 'pane_reasAfetassOperaesPorturiasMdioPrazo_48',
+            onEachFeature: pop_reasAfetassOperaesPorturiasMdioPrazo_48,
+            style: style_reasAfetassOperaesPorturiasMdioPrazo_48_0,
         });
-        bounds_group.addLayer(layer_reasAfetassOperaesPorturiasMdioPrazo_44);
-        function pop_reasAfetassOperaesPorturiasCurtoPrazo_45(feature, layer) {
+        bounds_group.addLayer(layer_reasAfetassOperaesPorturiasMdioPrazo_48);
+        function pop_reasAfetassOperaesPorturiasCurtoPrazo_49(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -3000,20 +3268,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil">' + (feature.properties['Perfil'] !== null ? autolinker.link(feature.properties['Perfil'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -3023,9 +3291,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_reasAfetassOperaesPorturiasCurtoPrazo_45_0() {
+        function style_reasAfetassOperaesPorturiasCurtoPrazo_49_0() {
             return {
-                pane: 'pane_reasAfetassOperaesPorturiasCurtoPrazo_45',
+                pane: 'pane_reasAfetassOperaesPorturiasCurtoPrazo_49',
                 opacity: 1,
                 color: 'rgba(216,58,98,1.0)',
                 dashArray: '',
@@ -3038,20 +3306,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_reasAfetassOperaesPorturiasCurtoPrazo_45');
-        map.getPane('pane_reasAfetassOperaesPorturiasCurtoPrazo_45').style.zIndex = 445;
-        map.getPane('pane_reasAfetassOperaesPorturiasCurtoPrazo_45').style['mix-blend-mode'] = 'normal';
-        var layer_reasAfetassOperaesPorturiasCurtoPrazo_45 = new L.geoJson(json_reasAfetassOperaesPorturiasCurtoPrazo_45, {
+        map.createPane('pane_reasAfetassOperaesPorturiasCurtoPrazo_49');
+        map.getPane('pane_reasAfetassOperaesPorturiasCurtoPrazo_49').style.zIndex = 449;
+        map.getPane('pane_reasAfetassOperaesPorturiasCurtoPrazo_49').style['mix-blend-mode'] = 'normal';
+        var layer_reasAfetassOperaesPorturiasCurtoPrazo_49 = new L.geoJson(json_reasAfetassOperaesPorturiasCurtoPrazo_49, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_reasAfetassOperaesPorturiasCurtoPrazo_45',
-            layerName: 'layer_reasAfetassOperaesPorturiasCurtoPrazo_45',
-            pane: 'pane_reasAfetassOperaesPorturiasCurtoPrazo_45',
-            onEachFeature: pop_reasAfetassOperaesPorturiasCurtoPrazo_45,
-            style: style_reasAfetassOperaesPorturiasCurtoPrazo_45_0,
+            dataVar: 'json_reasAfetassOperaesPorturiasCurtoPrazo_49',
+            layerName: 'layer_reasAfetassOperaesPorturiasCurtoPrazo_49',
+            pane: 'pane_reasAfetassOperaesPorturiasCurtoPrazo_49',
+            onEachFeature: pop_reasAfetassOperaesPorturiasCurtoPrazo_49,
+            style: style_reasAfetassOperaesPorturiasCurtoPrazo_49_0,
         });
-        bounds_group.addLayer(layer_reasAfetassOperaesPorturiasCurtoPrazo_45);
-        function pop_reasAfetassOperaesPorturiasSituaoAtual_46(feature, layer) {
+        bounds_group.addLayer(layer_reasAfetassOperaesPorturiasCurtoPrazo_49);
+        function pop_reasAfetassOperaesPorturiasSituaoAtual_50(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -3066,20 +3334,20 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nome</th>\
-                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Perfil de Carga </th>\
                         <td class="visible-with-data" id="Perfil">' + (feature.properties['Perfil'] !== null ? autolinker.link(feature.properties['Perfil'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Área (m²) </th>\
+                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tipo de Instalação </th>\
                         <td class="visible-with-data" id="T. Instal.">' + (feature.properties['T. Instal.'] !== null ? autolinker.link(feature.properties['T. Instal.'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Área (m²) </th>\
-                        <td class="visible-with-data" id="Área">' + (feature.properties['Área'] !== null ? autolinker.link(feature.properties['Área'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nome</th>\
+                        <td class="visible-with-data" id="Nome">' + (feature.properties['Nome'] !== null ? autolinker.link(feature.properties['Nome'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -3089,9 +3357,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_reasAfetassOperaesPorturiasSituaoAtual_46_0() {
+        function style_reasAfetassOperaesPorturiasSituaoAtual_50_0() {
             return {
-                pane: 'pane_reasAfetassOperaesPorturiasSituaoAtual_46',
+                pane: 'pane_reasAfetassOperaesPorturiasSituaoAtual_50',
                 opacity: 1,
                 color: 'rgba(232,113,141,1.0)',
                 dashArray: '',
@@ -3104,20 +3372,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_reasAfetassOperaesPorturiasSituaoAtual_46');
-        map.getPane('pane_reasAfetassOperaesPorturiasSituaoAtual_46').style.zIndex = 446;
-        map.getPane('pane_reasAfetassOperaesPorturiasSituaoAtual_46').style['mix-blend-mode'] = 'normal';
-        var layer_reasAfetassOperaesPorturiasSituaoAtual_46 = new L.geoJson(json_reasAfetassOperaesPorturiasSituaoAtual_46, {
+        map.createPane('pane_reasAfetassOperaesPorturiasSituaoAtual_50');
+        map.getPane('pane_reasAfetassOperaesPorturiasSituaoAtual_50').style.zIndex = 450;
+        map.getPane('pane_reasAfetassOperaesPorturiasSituaoAtual_50').style['mix-blend-mode'] = 'normal';
+        var layer_reasAfetassOperaesPorturiasSituaoAtual_50 = new L.geoJson(json_reasAfetassOperaesPorturiasSituaoAtual_50, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_reasAfetassOperaesPorturiasSituaoAtual_46',
-            layerName: 'layer_reasAfetassOperaesPorturiasSituaoAtual_46',
-            pane: 'pane_reasAfetassOperaesPorturiasSituaoAtual_46',
-            onEachFeature: pop_reasAfetassOperaesPorturiasSituaoAtual_46,
-            style: style_reasAfetassOperaesPorturiasSituaoAtual_46_0,
+            dataVar: 'json_reasAfetassOperaesPorturiasSituaoAtual_50',
+            layerName: 'layer_reasAfetassOperaesPorturiasSituaoAtual_50',
+            pane: 'pane_reasAfetassOperaesPorturiasSituaoAtual_50',
+            onEachFeature: pop_reasAfetassOperaesPorturiasSituaoAtual_50,
+            style: style_reasAfetassOperaesPorturiasSituaoAtual_50_0,
         });
-        bounds_group.addLayer(layer_reasAfetassOperaesPorturiasSituaoAtual_46);
-        function pop_PoligonaldareadoPortoOrganizadodeNiteri_47(feature, layer) {
+        bounds_group.addLayer(layer_reasAfetassOperaesPorturiasSituaoAtual_50);
+        function pop_PoligonaldareadoPortoOrganizadodeNiteri_51(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -3147,9 +3415,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_PoligonaldareadoPortoOrganizadodeNiteri_47_0() {
+        function style_PoligonaldareadoPortoOrganizadodeNiteri_51_0() {
             return {
-                pane: 'pane_PoligonaldareadoPortoOrganizadodeNiteri_47',
+                pane: 'pane_PoligonaldareadoPortoOrganizadodeNiteri_51',
                 opacity: 1,
                 color: 'rgba(255,1,1,1.0)',
                 dashArray: '',
@@ -3162,19 +3430,19 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_PoligonaldareadoPortoOrganizadodeNiteri_47');
-        map.getPane('pane_PoligonaldareadoPortoOrganizadodeNiteri_47').style.zIndex = 447;
-        map.getPane('pane_PoligonaldareadoPortoOrganizadodeNiteri_47').style['mix-blend-mode'] = 'normal';
-        var layer_PoligonaldareadoPortoOrganizadodeNiteri_47 = new L.geoJson(json_PoligonaldareadoPortoOrganizadodeNiteri_47, {
+        map.createPane('pane_PoligonaldareadoPortoOrganizadodeNiteri_51');
+        map.getPane('pane_PoligonaldareadoPortoOrganizadodeNiteri_51').style.zIndex = 451;
+        map.getPane('pane_PoligonaldareadoPortoOrganizadodeNiteri_51').style['mix-blend-mode'] = 'normal';
+        var layer_PoligonaldareadoPortoOrganizadodeNiteri_51 = new L.geoJson(json_PoligonaldareadoPortoOrganizadodeNiteri_51, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_PoligonaldareadoPortoOrganizadodeNiteri_47',
-            layerName: 'layer_PoligonaldareadoPortoOrganizadodeNiteri_47',
-            pane: 'pane_PoligonaldareadoPortoOrganizadodeNiteri_47',
-            onEachFeature: pop_PoligonaldareadoPortoOrganizadodeNiteri_47,
-            style: style_PoligonaldareadoPortoOrganizadodeNiteri_47_0,
+            dataVar: 'json_PoligonaldareadoPortoOrganizadodeNiteri_51',
+            layerName: 'layer_PoligonaldareadoPortoOrganizadodeNiteri_51',
+            pane: 'pane_PoligonaldareadoPortoOrganizadodeNiteri_51',
+            onEachFeature: pop_PoligonaldareadoPortoOrganizadodeNiteri_51,
+            style: style_PoligonaldareadoPortoOrganizadodeNiteri_51_0,
         });
-        bounds_group.addLayer(layer_PoligonaldareadoPortoOrganizadodeNiteri_47);
+        bounds_group.addLayer(layer_PoligonaldareadoPortoOrganizadodeNiteri_51);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -3187,28 +3455,32 @@
         .title += 'Search for a place';
         var overlaysTree = [
         {label: '<b>Poligonal da Área do Porto Organizado </b>', selectAllCheckbox: true, children: [
-            {label: '<img src="legend/PoligonaldareadoPortoOrganizadodeNiteri_47.png" /> Poligonal da Área do Porto Organizado de Niterói', layer: layer_PoligonaldareadoPortoOrganizadodeNiteri_47},]},
+            {label: '<img src="legend/PoligonaldareadoPortoOrganizadodeNiteri_51.png" /> Poligonal da Área do Porto Organizado de Niterói', layer: layer_PoligonaldareadoPortoOrganizadodeNiteri_51},]},
         {label: '<b>Áreas Afetas às Operações Portuárias </b>', selectAllCheckbox: true, children: [
-            {label: '<img src="legend/reasAfetassOperaesPorturiasSituaoAtual_46.png" /> Áreas Afetas às Operações Portuárias - Situação Atual ', layer: layer_reasAfetassOperaesPorturiasSituaoAtual_46},
-            {label: '<img src="legend/reasAfetassOperaesPorturiasCurtoPrazo_45.png" /> Áreas Afetas às Operações Portuárias - Curto Prazo ', layer: layer_reasAfetassOperaesPorturiasCurtoPrazo_45},
-            {label: '<img src="legend/reasAfetassOperaesPorturiasMdioPrazo_44.png" /> Áreas Afetas às Operações Portuárias - Médio Prazo ', layer: layer_reasAfetassOperaesPorturiasMdioPrazo_44},
-            {label: '<img src="legend/reasAfetassOperaesPorturiasLongoPrazo_43.png" /> Áreas Afetas às Operações Portuárias - Longo Prazo ', layer: layer_reasAfetassOperaesPorturiasLongoPrazo_43},]},
+            {label: '<img src="legend/reasAfetassOperaesPorturiasSituaoAtual_50.png" /> Áreas Afetas às Operações Portuárias - Situação Atual ', layer: layer_reasAfetassOperaesPorturiasSituaoAtual_50},
+            {label: '<img src="legend/reasAfetassOperaesPorturiasCurtoPrazo_49.png" /> Áreas Afetas às Operações Portuárias - Curto Prazo ', layer: layer_reasAfetassOperaesPorturiasCurtoPrazo_49},
+            {label: '<img src="legend/reasAfetassOperaesPorturiasMdioPrazo_48.png" /> Áreas Afetas às Operações Portuárias - Médio Prazo ', layer: layer_reasAfetassOperaesPorturiasMdioPrazo_48},
+            {label: '<img src="legend/reasAfetassOperaesPorturiasLongoPrazo_47.png" /> Áreas Afetas às Operações Portuárias - Longo Prazo ', layer: layer_reasAfetassOperaesPorturiasLongoPrazo_47},]},
         {label: '<b>Áreas Afetas às Operações Portuárias por Perfil de Carga - Situação Atual </b>', selectAllCheckbox: true, children: [
-            {label: '<img src="legend/CargaOffshoreReparoNaval_42.png" /> Carga Offshore/Reparo Naval', layer: layer_CargaOffshoreReparoNaval_42},
-            {label: '<img src="legend/GranisSlidosCargaGeral_41.png" /> Granéis Sólidos/Carga Geral', layer: layer_GranisSlidosCargaGeral_41},
-            {label: '<img src="legend/CargaGeralOffshore_40.png" /> Carga Geral/Offshore', layer: layer_CargaGeralOffshore_40},]},
+            {label: '<img src="legend/CargaOffshoreeReparoNaval_46.png" /> Carga Offshore e Reparo Naval', layer: layer_CargaOffshoreeReparoNaval_46},
+            {label: '<img src="legend/GranisSlidoseCargaGeral_45.png" /> Granéis Sólidos e Carga Geral', layer: layer_GranisSlidoseCargaGeral_45},
+            {label: '<img src="legend/CargaGeraleOffshore_44.png" /> Carga Geral e Offshore', layer: layer_CargaGeraleOffshore_44},
+            {label: '<img src="legend/FluidosdePerfurao_43.png" /> Fluidos de Perfuração', layer: layer_FluidosdePerfurao_43},]},
         {label: '<b>Áreas Afetas às Operações Portuárias por Perfil de Carga - Curto Prazo</b>', selectAllCheckbox: true, children: [
-            {label: '<img src="legend/CargaOffshoreReparoNaval_39.png" /> Carga Offshore/Reparo Naval', layer: layer_CargaOffshoreReparoNaval_39},
-            {label: '<img src="legend/GranisSlidosCargaGeral_38.png" /> Granéis Sólidos/Carga Geral', layer: layer_GranisSlidosCargaGeral_38},
-            {label: '<img src="legend/CargaGeralOffshore_37.png" /> Carga Geral/Offshore', layer: layer_CargaGeralOffshore_37},]},
+            {label: '<img src="legend/CargaOffshoreeReparoNaval_42.png" /> Carga Offshore e Reparo Naval', layer: layer_CargaOffshoreeReparoNaval_42},
+            {label: '<img src="legend/GranisSlidoseCargaGeral_41.png" /> Granéis Sólidos e Carga Geral', layer: layer_GranisSlidoseCargaGeral_41},
+            {label: '<img src="legend/CargaGeraleOffshore_40.png" /> Carga Geral e Offshore', layer: layer_CargaGeraleOffshore_40},
+            {label: '<img src="legend/FluidosdePerfurao_39.png" /> Fluidos de Perfuração ', layer: layer_FluidosdePerfurao_39},]},
         {label: '<b>Áreas Afetas às Operações Portuárias por Perfil de Carga - Médio Prazo</b>', selectAllCheckbox: true, children: [
-            {label: '<img src="legend/CargaOffshoreReparoNaval_36.png" /> Carga Offshore/Reparo Naval', layer: layer_CargaOffshoreReparoNaval_36},
-            {label: '<img src="legend/GranisSlidosCargaGeral_35.png" /> Granéis Sólidos/Carga Geral', layer: layer_GranisSlidosCargaGeral_35},
-            {label: '<img src="legend/CargaGeralOffshore_34.png" /> Carga Geral/Offshore', layer: layer_CargaGeralOffshore_34},]},
+            {label: '<img src="legend/CargaOffshoreeReparoNaval_38.png" /> Carga Offshore e Reparo Naval', layer: layer_CargaOffshoreeReparoNaval_38},
+            {label: '<img src="legend/GranisSlidoseCargaGeral_37.png" /> Granéis Sólidos e Carga Geral', layer: layer_GranisSlidoseCargaGeral_37},
+            {label: '<img src="legend/CargaGeraleOffshore_36.png" /> Carga Geral e Offshore', layer: layer_CargaGeraleOffshore_36},
+            {label: '<img src="legend/FluidosdePerfurao_35.png" /> Fluidos de Perfuração', layer: layer_FluidosdePerfurao_35},]},
         {label: '<b>Áreas Afetas às Operações Portuárias por Perfil de Carga - Longo Prazo</b>', selectAllCheckbox: true, children: [
-            {label: '<img src="legend/CargaOffshoreReparoNaval_33.png" /> Carga Offshore/Reparo Naval', layer: layer_CargaOffshoreReparoNaval_33},
-            {label: '<img src="legend/GranisSlidosCargaGeral_32.png" /> Granéis Sólidos/Carga Geral', layer: layer_GranisSlidosCargaGeral_32},
-            {label: '<img src="legend/CargaGeralOffshore_31.png" /> Carga Geral/Offshore', layer: layer_CargaGeralOffshore_31},]},
+            {label: '<img src="legend/CargaOffshoreeReparoNaval_34.png" /> Carga Offshore e Reparo Naval', layer: layer_CargaOffshoreeReparoNaval_34},
+            {label: '<img src="legend/GranisSlidoseCargaGeral_33.png" /> Granéis Sólidos e Carga Geral', layer: layer_GranisSlidoseCargaGeral_33},
+            {label: '<img src="legend/CargaGeraleOffshore_32.png" /> Carga Geral e Offshore', layer: layer_CargaGeraleOffshore_32},
+            {label: '<img src="legend/FluidosdePerfurao_31.png" /> Fluidos de Perfuração', layer: layer_FluidosdePerfurao_31},]},
         {label: '<b>Áreas Afetas às Operações Portuárias Arrendadas </b>', selectAllCheckbox: true, children: [
             {label: '<img src="legend/reasAfetassOperaesPorturiasArrendadas_30.png" /> Áreas Afetas às Operações Portuárias Arrendadas ', layer: layer_reasAfetassOperaesPorturiasArrendadas_30},]},
         {label: '<b>Áreas Afetas às Operações Portuárias Disponíveis para Arrendamento </b>', selectAllCheckbox: true, children: [
